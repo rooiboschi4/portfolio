@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+html{
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    width: 100%;
+}
+@media screen and (min-width: 640px){
+    div@body{
+    width: 160px;
+    }
+}
