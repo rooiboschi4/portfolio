@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+html{
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    width: 100%;
+}
+@media screen and (min-width: 640px){
+    div@body{
+    width: 160px;
+    }
+}
+/*sidebar*/
+ul{
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+    width: 560px;
+    background-color: aquamarine;
+}
+li a{
+    display: block;
+    color: #000;
+    padding: 9px 16px;
+    text-decoration: none;
+}
+li a:hover{
+    background-color: aliceblue;
+    color: mediumaquamarine;
+}
+#welcome{
+    width: 560px;
+    margin: auto;
+}
+.welcome_text{
+    font-size: 28px;
+}
+.space{
+    width: 560px;
+    height: 600px;
+    background-color: hsla(160,100%,80%);
+    margin: auto;
+}
+#about{
+    width: 560px;
+    margin: auto;
+    font-size: 23px;
+}
+#work{
+    width: 300px;
+    margin: auto;
+    font-size: 20px; 
+}
+/*SKILLS*/
+#skill{
+    width: 560px;
+    margin: auto;
+}
+.languages{
+    width: 560px;
+    margin: auto;
+}
+.skill{
+  width: 100px;
+  height: 30px;
+  background-color: aquamarine;
+  border-radius: 30px;
+  color: #fff;
+  text-align: center;
+    margin: 10px;
+}
+.container{
+    width: 80%;
+    background-color: #ddd;
+    margin: auto;
+}
+.skills{
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 13px;
+    color: white;
+}
+
+.jp{
+    width: 100%;
+    background-color: chocolate;
+}
+.en{
+    width: 60%;
+    background-color: bisque
+}
+.sp{
+    width: 80%;
+    background-color: coral;
+}
+.ca{
+    width: 60%;
+    background-color: bisque;
+}
+.po{
+    width: 40%;
+    background-color: cyan;
+}
+
