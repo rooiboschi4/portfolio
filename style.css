@@ -60,6 +60,9 @@ li a:hover{
     width: 560px;
     margin: auto;
 }
+.pl-container{
+    display: flex;
+}
 .pl{
   width: 100px;
   height: 30px;
