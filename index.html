@@ -2,6 +2,8 @@
     <head>
         <title>Portfolio Chiho Murata</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="path/intersection-observer.js"></script>
   <script src="path/main.js"></script>
     </head>
@@ -22,6 +24,7 @@
             <!--ABOUT div-->
             <div id="about">
                 <p class="title">CHIHO MURATA</p>
+                <p class="border"></p>
                 <p>I live in Spain for 5 years;</p>
                 <p>Love my daughter, learning new languadge, touching programming knowledge...</p>
 
@@ -41,7 +44,15 @@
             </div>
             <div class="space"></div>
             <!--WORK div-->
-            <div id="work"><p>I'm working as WEB translater and marketer at restaurant which my husband run <a href="http://carlotaakaneya.com">(Carlota Akaneya)</a>.</p></div>
+            <div id="work">
+                    <div class="work">
+                    <p>I'm working as WEB translater and marketer at restaurant which my husband run <a href="http://carlotaakaneya.com">(Carlota Akaneya)</a>.</p>
+                    <img alt="carlotaakaneya" src="image/carlotaakaneya.jpg" class="workimg">
+                    </div>
+                    <div class="work">
+                    <p>My old project, I worked as WEB contents translater with Palacio de Flamenco</p>
+                    </div>
+                </div>
             <div id="skills">
                 <h3>Programming languages</h3>
                 <div class="pl-container">
@@ -55,8 +66,13 @@
                 <div class="pl-container">
                     <div class="pl sql">MySQL</div>
                 </div>
+                <h3>Framework</h3>
+                <div class="pl-container">
+                    <div class="pl llbl">Larabel</div>
+                    <div class="pl bs">Bootstrap</div>
+                </div>
                 <div class="languages">
-                    <h3>Language</h3>                
+                    <h3>Language</h3>
                         <p>Japanese</p>
                         <div class="container">
                             <div class="lg jp">Native</div>
@@ -83,6 +99,7 @@
                         </div>
                     
                     <h3 style="margin-top: 50px;">About me</h3>
+                    <p class="border"></p>
                     <div class="skill" data-proficiency="90"><!-- スキル全体を囲う要素。熟練度を0~100の間で記入 -->
 
                         <div class="skill-info">
@@ -162,7 +179,8 @@
                 </div>
                 
             </div>
-            <a href="index.html">home..></a>
+            <div id="gototop"><a href="#"></a></div>
+            
         </div>
     </body>
 </html>

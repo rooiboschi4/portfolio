@@ -46,10 +46,37 @@ li a:hover{
     margin: auto;
     font-size: 23px;
 }
+.border{
+    position: relative;
+}
+.border:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    border-bottom: solid 2px #000;
+    animation: border_anim 3s linear forwards;
+}
+@keyframes border_anim{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
 #work{
-    width: 300px;
+    width: 560px;
     margin: auto;
     font-size: 20px; 
+}
+.work{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+.workimg{
+    width: 300px;
+    height: auto;
 }
 /*SKILLS*/
 #skills{
@@ -144,4 +171,38 @@ li a:hover{
   width: 0; /* 初期状態では0 */
   background-color: #34e8d7; /* スキルバーの色 */
   transition: width 3s cubic-bezier(0.22, 1, 0.36, 1); /* スキルバーが伸びる速度を調整 */
+}
+
+/*Botton style*/
+#gototop{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background: #3fefee;
+    opacity: 0.6;
+}
+#gototop a{
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+}
+#gototop a::before{
+    font-family: 'Font Awesome 5 free';
+    font-weight: 900;
+    content: '\f062';
+    font-size: 25px;
+    color: #fff;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
 }

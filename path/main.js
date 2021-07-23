@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', () => {
 
   // DOM要素を取得
-  const skillEls = document.querySelectorAll('.skill');
+  const skillEls = document.querySelectorAll('.bar');
 
   // カウントアップの設定
   const animationDuration = 2000;
@@ -31,8 +31,8 @@ window.addEventListener('DOMContentLoaded', () => {
     entries.forEach((entry) => {
       if(entry.isIntersecting) {
         const proficiencyVal = entry.target.dataset.proficiency;
-        const skillBar = entry.target.querySelector('.skill-bar');
-        const percentage = entry.target.querySelector('.skill-percentage');
+        const skillBar = entry.target.querySelector('.bar');
+        const percentage = entry.target.querySelector('.bar-percentage');
         const countup = entry.target.querySelector('.countup');
 
         skillBar.style.width = proficiencyVal + '%';
@@ -57,4 +57,30 @@ window.addEventListener('DOMContentLoaded', () => {
     io.observe(el);
   });
 
+});
+
+jQuery(function(){
+    var appear = false;
+    var pagetop = $('#gototop');
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 100){ //if scroll 100px down
+            if (appear == false) {
+                appear = true;
+                pagetop.stop().animate({ //at 50px from above
+                    'bottom': '50px' //appear in 0.3 sec
+                }, 300)
+            }
+        } else {
+            if (appear) {
+                appear = false;
+                pagetop.stop().animate({
+                    'bottom': '-50px'
+                }, 300)
+            }
+        }
+    });
+    pagetop.click(function(){
+        $('body, html').animate({scrollTop: 0}, 500);
+        return false;
+    });
 });
