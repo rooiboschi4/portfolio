@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', () => {
 
   // DOM要素を取得
-  const skillEls = document.querySelectorAll('.bar');
+  const skillEls = document.querySelectorAll('.skill');
 
   // カウントアップの設定
   const animationDuration = 2000;
@@ -26,13 +26,18 @@ window.addEventListener('DOMContentLoaded', () => {
     }, frameDuration);
   };
 
+    
+ 
+    
+    
+    
   // Intersection observerに渡すコールバック関数
   const cb = function(entries, observer) {
     entries.forEach((entry) => {
       if(entry.isIntersecting) {
         const proficiencyVal = entry.target.dataset.proficiency;
-        const skillBar = entry.target.querySelector('.bar');
-        const percentage = entry.target.querySelector('.bar-percentage');
+        const skillBar = entry.target.querySelector('.skill-bar');
+        const percentage = entry.target.querySelector('.skill-percentage');
         const countup = entry.target.querySelector('.countup');
 
         skillBar.style.width = proficiencyVal + '%';
