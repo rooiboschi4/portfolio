@@ -1,3 +1,13 @@
+window.onscroll = function () {scrollFunction()};
+
+function scrollFunction(){
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+        document.getElementById("navbar").style.top = "0";
+    } else {
+        document.getElementById("navbar").style.top = "-50px";
+    }
+}
+
 window.addEventListener('DOMContentLoaded', () => {
 
   // DOM要素を取得
@@ -64,28 +74,19 @@ window.addEventListener('DOMContentLoaded', () => {
 
 });
 
-jQuery(function(){
-    var appear = false;
-    var pagetop = $('#gototop');
-    $(window).scroll(function(){
-        if ($(this).scrollTop() > 100){ //if scroll 100px down
-            if (appear == false) {
-                appear = true;
-                pagetop.stop().animate({ //at 50px from above
-                    'bottom': '50px' //appear in 0.3 sec
-                }, 300)
-            }
+$(document).ready(function(){
+    $("#gototop").hide();
+    $(window).on("scroll", function(){
+        if ($(this).scrollTop() > 100){
+            $("#gototop").fadeIn("fast");
         } else {
-            if (appear) {
-                appear = false;
-                pagetop.stop().animate({
-                    'bottom': '-50px'
-                }, 300)
-            }
+            $("#gototop").fadeOut("fast");
         }
     });
-    pagetop.click(function(){
-        $('body, html').animate({scrollTop: 0}, 500);
+    $("#gototop").click(function(){
+        $('body,html').animate({
+            scrollTop: 0
+        }, 400);
         return false;
-    });
-});
+    })
+})
